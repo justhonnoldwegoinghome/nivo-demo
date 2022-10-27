@@ -49,8 +49,8 @@ export function App() {
               borderRadius: "15px",
             }}
           >
-            <p>{`Psf: S$ ${data["y"]}`}</p>
-            <p>{`Size: ${data["areaSqft"]} sqft`}</p>
+            <p>{`Psf: S$ ${data["y"].toLocaleString()}`}</p>
+            <p>{`Size: ${data["areaSqft"].toLocaleString()} sqft`}</p>
             <p>{`Floor range: ${data["floorRange"]}`}</p>
           </div>
         )}
