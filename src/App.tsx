@@ -14,6 +14,7 @@ export function App() {
           type: "time",
           format: "%Y-%m-%d",
         }}
+        colors={{ scheme: "category10" }}
         xFormat="time:%Y-%m-%d"
         yScale={{
           type: "linear",
