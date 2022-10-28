@@ -96,4 +96,24 @@ export const transformTransactions = {
       ],
     };
   },
+  victory: (transactions: TransactionType[]) => {
+    return transactions
+      .map((t) => ({
+        areaSqft: Math.round(Number(t["area"]) * 10.7639),
+        floorRange: t["floorRange"],
+        x: new Date(
+          `20${t["contractDate"].slice(2)}-${t["contractDate"].slice(0, 2)}-01`
+        ),
+        y: Math.round(
+          Number(t["price"]) / Math.round(Number(t["area"]) * 10.7639)
+        ),
+      }))
+      .map((t) => ({
+        x: t["x"],
+        y: t["y"],
+        floorRange: t["floorRange"],
+        label: "Hello!",
+        symbol: "triangleUp",
+      }));
+  },
 };
