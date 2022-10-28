@@ -4,7 +4,6 @@ import { transactions } from "../data/transactions";
 import { transformTransactions } from "../transform";
 
 export function VictoryScatter() {
-  console.log(transformTransactions.victory(transactions));
   return (
     <div>
       <V.VictoryChart
